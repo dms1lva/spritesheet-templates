@@ -57,6 +57,7 @@ ${{retina_groups_info.strings.name}}: ({{#each retina_groups}}${{strings.name_gr
 }
 
 @mixin retina-sprite($retina-group) {
+  @include validate-retina-group($retina-group)
   $normal-sprite: nth($retina-group, 2);
   $retina-sprite: nth($retina-group, 3);
   @include sprite($normal-sprite);
