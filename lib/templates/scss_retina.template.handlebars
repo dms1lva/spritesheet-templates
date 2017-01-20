@@ -70,7 +70,7 @@ ${{retina_groups_info.strings.name}}: ({{#each retina_groups}}${{strings.name_gr
 
 // Validates the variable given to the mixin retina-sprite
 @mixin validate-retina-group($retina-group) {
-    @if type-of($retina-group[0]) != string or type-of($retina-group[1]) != list or type-of($retina-group[2]) != list {
+    @if type-of(nth($retina-group, 0)) != string or type-of(nth($retina-group, 1)) != list or type-of(nth($retina-group, 3)) != list {
       @error('A wrong variable was given to the mixin retina-sprite. Here is its value: #{$retina-group}');
     }
 }
